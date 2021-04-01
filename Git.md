@@ -45,15 +45,53 @@ git push https://github.com/dorritm/m（网址） master
 
 在提交的过程中会让输入GitHub的账号和密码，输入即可
 
-### 更新说明
+### 更新内容
 
 与安装基本相同
 
 ### 从git仓库中拷贝内容
 
-git clone <repo>
+repo:Git仓库    directory:本地目录
 
-如果要克隆到指定的目录，可以用 git clone <repo> <directory>
+克隆仓库： 
+
+```
+git clone <repo>
+```
+
+克隆到指定的目录：
+
+```
+ git clone <repo> <directory> 
+```
+
+比如git clone git://github.com/dorritm/m.git mygrit 会在当前目录下创建一个叫mygrit的目录，存放拷贝内容。
+
+### 配置git config
+
+```
+$ git config --global user.email "your email"
+$ git config --global user.name "your name"
+```
+
+### 提交与修改
+
+### 提交和修改
+
+```
+git add  [file]|[dir]|.        分别是添加文件到暂存区|添加指定目录到暂存区|添加当前目录下的所有文件到暂存区。
+git status 						查看项目当前的状态
+git log							提交日志查询 
+git commit -m [message]			提交暂存到本地仓库
+```
+
+### 远程操作
+
+```
+git remove -v						显示所有远程仓库
+git remote rm name  				删除远程仓库
+git remote rename old_name new_name 修改仓库名
+```
 
 ### Git工作区、暂存区和版本区
 
