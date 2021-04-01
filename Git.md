@@ -1,5 +1,7 @@
 # Git使用说明
 
+### 安装说明
+
 1.首先在git安装目录下找到并打开git-bash，设置基本信息：
 
 ```
@@ -19,10 +21,46 @@ git init
 git add [file1] [file2]
 ```
 
-4.输入git commit -m "提交信息" ，将文件提交到本地仓库，提交信息必须填写
+4.提交到暂存区后，那开发者怎么看到这个是否提交成功呢？
 
-5.输入git remote add origin github代码仓库的url地址，将代码仓库与github关联
+```
+git status
+```
 
-6.输入git pull origin master，将远程代码仓库拉回到本地，第一次提交可以不加，但以后提交时要加，否则代码可能会杂糅在一起。
+显示git版本管理工具的控制范围git status,会对git管理范围内所有文件进行监听，监听这些文件处于什么状态
 
-7.输入git push -u origin master，将代码提交到github，输入回车后需要输入你的github名称和密码。
+5.把缓存区的文件提交到本地主仓库内
+
+```
+git commit -m “备注信息（可以是任何）”
+```
+
+6.提交到主仓库后，在提交到gitHub服务器上
+
+```
+git push https://github.com/dorritm/m（网址） master
+```
+
+将本地主仓库的内部代码提交到GitHub远程服务器上
+
+在提交的过程中会让输入GitHub的账号和密码，输入即可
+
+### 更新说明
+
+```
+git remote add origin git@github.com:用户名/Repository项目名称.git
+```
+
+建立了此电脑和服务器上创建的项目的连接
+
+```
+git pull origin master --allow-unrelated-histories
+```
+
+取回服务器的master更新
+
+```
+git push origin master
+```
+
+将本地的git项目同步到服务器上
