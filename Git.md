@@ -1,6 +1,6 @@
 # Git使用说明
 
-### 安装说明
+### 创建仓库
 
 1.首先在git安装目录下找到并打开git-bash，设置基本信息：
 
@@ -47,20 +47,21 @@ git push https://github.com/dorritm/m（网址） master
 
 ### 更新说明
 
-```
-git remote add origin git@github.com:用户名/Repository项目名称.git
-```
+与安装基本相同
 
-建立了此电脑和服务器上创建的项目的连接
+### 从git仓库中拷贝内容
 
-```
-git pull origin master --allow-unrelated-histories
-```
+git clone <repo>
 
-取回服务器的master更新
+如果要克隆到指定的目录，可以用 git clone <repo> <directory>
 
-```
-git push origin master
-```
+### Git工作区、暂存区和版本区
 
-将本地的git项目同步到服务器上
+工作区：电脑能看到的目录
+
+暂存区：英文叫stage或index。一般存放在.git目录下的index文件中，把暂存区也叫索引。
+
+版本库：工作区的隐藏目录.git
+
+
+
